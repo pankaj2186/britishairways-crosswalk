@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: https://author-p142158-e1456030.adobeaemcloud.com/bin/franklin.delivery/pankaj2186/kbank-wknd-xwalk/main
+    type: markup
+    suffix: ".html?wcmmode=disabled"
