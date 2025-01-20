@@ -365,4 +365,7 @@ main .section[data-section-status='initialized'] {
 .background-color-red {
   background-color:#ce210f;
   color: white;
+  a {
+   color: white;
+  }
 }
