@@ -1,20 +1,17 @@
-/* eslint-disable no-underscore-dangle */
 export default async function decorate(block) {
-  const aempublishurl = 'https://publish-p51327-e1446332.adobeaemcloud.com';
-  const aemauthorurl = 'https://author-p51327-e1446332.adobeaemcloud.com';
-  const persistedquery = '/graphql/execute.json/wknd-shared/offer-by-path';
-  const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
-  const variationname = "master";//block.querySelector(':scope div:nth-child(2) > div > p').innerText ? block.querySelector(':scope div:nth-child(2) > div > p').innerText : 'main';
-  //const variationname = block.querySelector(':scope div:nth-child(2) > div').innerHTML.trim();
+  const aempublishurl = 'https://publish-p148716-e1519766.adobeaemcloud.com';
+  const aemauthorurl = 'https://author-p148716-e1519766.adobeaemcloud.com';
+  //const persistedquery = '/graphql/execute.json/wknd-shared/offer-by-path';
+  //const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
 
-  const url = window.location && window.location.origin && window.location.origin.includes('author')
-    ? `${aemauthorurl}${persistedquery};cfpath=${offerpath}`
-    : `${aempublishurl}${persistedquery};cfpath=${offerpath}`;
-  const options = { credentials: 'include' };
+  // const url = window.location && window.location.origin && window.location.origin.includes('author')
+  //   ? `${aemauthorurl}${persistedquery};cfpath=${offerpath}`
+  //   : `${aempublishurl}${persistedquery};cfpath=${offerpath}`;
+  // const options = { credentials: 'include' };
 
   // console.log(url); //https://author-p123917-e1220159.adobeaemcloud.com/graphql/execute.json/securbank/OfferByPath;path=/content/dam/securbank/en/offers/997;variation=main;ts=172.03956935404463
 
-  const cfReq = await fetch(offerpath+".-1.json", options)
+  const cfReq = await fetch("https://author-p148716-e1519766.adobeaemcloud.com/content/dam/british-airways/content-fragment/offers/credit-card-offer/jcr%3Acontent/data/master.json")
     .then((response) => response.json())
     .then((contentfragment) => {
       let offer = {};
@@ -26,19 +23,9 @@ export default async function decorate(block) {
         offer.description = masterData.description;
         offer.ctalabel = masterData.ctalabel;
         offer.ctaurl = masterData.ctaurl;
-      }/*else{
-        const masterData = contentfragment['jcr:content'].data.master;        
-        offer.title = masterData.title;
-        offer.subtitle = masterData.subtitle;
-        offer.bannerimage = masterData.bannerimage;
-        offer.description = masterData.description;
-        offer.ctalabel = masterData.ctalabel;
-        offer.ctaurl = masterData.ctaurl;
-      }*/
+      }
       return offer;
     });
-
- // const itemId = `urn:aemconnection:${offerpath}/jcr:content/data/${variationname}`;
 
   block.innerHTML = `
   <div class='banner-content' data-aue-type="reference" data-aue-filter="cf">
