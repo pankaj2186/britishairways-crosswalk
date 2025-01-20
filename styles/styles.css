@@ -133,7 +133,7 @@ body p {
 
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -369,4 +369,11 @@ main .section[data-section-status='initialized'] {
 
 .background-color-red h6 a {
    color: white;
+   text-decoration: underline;
+}
+
+.background-color-red .button-container .primary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
 }
