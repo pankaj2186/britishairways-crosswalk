@@ -377,3 +377,7 @@ main .section[data-section-status='initialized'] {
     color: white;
     border: 1px solid;
 }
+
+.columns img {
+    min-height: 276px;
+}
