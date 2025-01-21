@@ -387,7 +387,6 @@ main .section.tabs-container{
 }
 
 a {
-    color: #2671d3 !important;
     font-size: 1rem;
     font-weight: 300;
     font-family: Open Sans, helvetica, arial, sans-serif;
@@ -395,4 +394,8 @@ a {
 
 h3 a {
     font-size: 1.25rem;
+}
+
+.custom-anchor a{
+ color: #2671d3 !important;
 }
