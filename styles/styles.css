@@ -381,3 +381,7 @@ main .section[data-section-status='initialized'] {
 .columns img {
     min-height: 276px;
 }
+
+.section .tabs-container{
+ display:none;
+}
