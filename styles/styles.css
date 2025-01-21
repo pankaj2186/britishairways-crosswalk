@@ -385,3 +385,15 @@ main .section[data-section-status='initialized'] {
 main .section.tabs-container{
  display:none;
 }
+
+a {
+    color: #2671d3;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: Open Sans, helvetica, arial, sans-serif;
+}
+
+h3 a {
+    font-size: 1.25rem;
+}
