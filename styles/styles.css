@@ -382,6 +382,6 @@ main .section[data-section-status='initialized'] {
     min-height: 276px;
 }
 
-.section .tabs-container{
+main .section.tabs-container{
  display:none;
 }
