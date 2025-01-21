@@ -2,7 +2,8 @@ export default async function decorate(block) {
   console.log("offer component executed successfully");
   const aempublishurl = 'https://publish-p148716-e1519766.adobeaemcloud.com';
   const aemauthorurl = 'https://author-p148716-e1519766.adobeaemcloud.com';
-  const cfReq = await fetch("https://author-p148716-e1519766.adobeaemcloud.com/content/dam/british-airways/content-fragment/offers/credit-card-offer/jcr%3Acontent/data/master.json")
+  const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
+  const cfReq = await fetch("https://author-p148716-e1519766.adobeaemcloud.com"+offerpath+"/jcr%3Acontent/data/master.json")
   .then((response) => response.json()).then((contentfragment) => {
     let offer = {};
     if (contentfragment) {
