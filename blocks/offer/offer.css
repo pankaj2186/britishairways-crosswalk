@@ -127,7 +127,7 @@
 
   .banner-content .banner-detail::before {
     content:"";
-    background-color: rgba(0,0,0,.3);
+    background-color: black;
     height: 100%;
     width: 100%;
     position: absolute;
