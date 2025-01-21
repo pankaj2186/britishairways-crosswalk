@@ -1,7 +1,7 @@
 export default async function decorate(block) {
   console.log("offer component executed successfully");
-  // const aempublishurl = 'https://publish-p148716-e1519766.adobeaemcloud.com';
-  // const aemauthorurl = 'https://author-p148716-e1519766.adobeaemcloud.com';
+  const aempublishurl = 'https://publish-p148716-e1519766.adobeaemcloud.com';
+  const aemauthorurl = 'https://author-p148716-e1519766.adobeaemcloud.com';
   //const persistedquery = '/graphql/execute.json/wknd-shared/offer-by-path';
   //const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
 
@@ -12,8 +12,10 @@ export default async function decorate(block) {
 
   // console.log(url); //https://author-p123917-e1220159.adobeaemcloud.com/graphql/execute.json/securbank/OfferByPath;path=/content/dam/securbank/en/offers/997;variation=main;ts=172.03956935404463
   
-  // const cfReq = await fetch("https://author-p148716-e1519766.adobeaemcloud.com/content/dam/british-airways/content-fragment/offers/credit-card-offer/jcr%3Acontent/data/master.json")
-  //   .then((response) => response.json())
+  const cfReq = await fetch("https://author-p148716-e1519766.adobeaemcloud.com/content/dam/british-airways/content-fragment/offers/credit-card-offer/jcr%3Acontent/data/master.json")
+   .then((response) => {response.json()
+    console.log("response {}", response.json);
+   })
   //   .then((contentfragment) => {
   //     let offer = {};
   //     const masterData = contentfragment['jcr:content'].data.master;
