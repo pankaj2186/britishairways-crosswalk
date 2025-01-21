@@ -1,4 +1,5 @@
 export default async function decorate(block) {
+  console.log('hero component executed');
   let row = block.firstElementChild;
   const bg = row.querySelector('picture');
   block.append(bg);
