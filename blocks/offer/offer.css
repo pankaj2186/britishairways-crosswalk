@@ -92,6 +92,11 @@
     position: relative;
   }
 
+  .banner-content .banner-detail .hyperlink {
+    font-size: 20px;
+    color: white;
+  }
+
   .banner1300x435 .banner-content .banner-detail .pretitle {
     font-size: 48px;
     line-height: 48px;
