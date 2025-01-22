@@ -399,3 +399,7 @@ h3 a {
 .custom-anchor a{
  color: #2671d3 !important;
 }
+
+.icon-search a {
+ font-size: 22px;
+}
