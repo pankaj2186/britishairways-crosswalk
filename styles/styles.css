@@ -403,3 +403,11 @@ h3 a {
 .nav-tools a {
  font-size: 22px;
 }
+
+.max-width-50 {
+ max-width:50%;
+}
+
+.offer-wrapper {
+ padding:5%;
+}
